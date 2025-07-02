@@ -53,3 +53,14 @@ if not data.empty:
         st.plotly_chart(bar, use_container_width=True)
 else:
     st.warning("No data yet. Add a transaction to get started.")
+
+# Hide Streamlit menu and footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
